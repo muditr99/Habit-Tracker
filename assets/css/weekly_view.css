@@ -1,0 +1,68 @@
+table, th, td{
+    border: 1px solid lightgrey;
+}
+
+table{
+    border-collapse: collapse;
+    margin-top: 3%;
+    width: 95%;
+    min-height: 20%;
+    background-color:rgb(246, 249, 252);
+}
+
+.drop-down li{
+    list-style: none;
+}
+
+.drop-down li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 1rem 0;
+}
+
+.sub-menu{
+    display: none;
+}
+
+.drop-down li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    background: rgb(241, 207, 163);
+    height: 82.5px;
+    width: 150px;
+}
+
+.drop-down li:hover .sub-menu ul li{
+    border-bottom: 1px dotted peru;
+    padding-top: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+.drop-down li:hover .sub-menu ul li a{
+    color: rgb(154, 68, 253);
+    text-align: center;
+}
+
+.drop-down li:hover .sub-menu ul li a:hover{
+    color: rgb(46, 36, 179);
+}
+
+th{
+    font-weight: bold;
+    font-size: 18px;
+    padding: 1rem 1rem;
+}
+
+.date-style{
+    color: teal;
+    background-color: rgb(250, 242, 208);
+}
+
+.habit-style{
+    color: teal;
+    font-size: 20px;
+    background-color: rgb(250, 242, 208);
+}
+

@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="/css/weekly_view.css">
+<script src="/js/weekly_view.js"></script>
+
+<h1></h1>
+
+<table>
+    <thead>
+        <tr>
+            <th style="color:black;background-color: wheat;">Habit Name</th>
+            <% for(let i of days){ %>
+                    <th class="date-style"><%= i %></th>    
+            <% } %>
+        </tr>
+    </thead>
+    <tbody>
+        <% for(let i of habit_list){ %>
+            <tr>
+            <th class="habit-style"><%= i.name %></th> 
+            <% for(let j=0;j<days.length;j++) {%>
+                <td>
+                    <ul class="drop-down">
+                    <li><a class="check" href="/weekView">
+                        <% if( i.Days[j] == null){ %>
+                            None
+                        <% }else{ %>
+                            <%= i.Days[j] %>
+                        <% } %>
+                    </a>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a href="/weekView/update/?id=<%= i._id %>&day=<%= j %>&type=Complete">Complete</a></li>
+                                <li><a href="/weekView/update/?id=<%= i._id %>&day=<%= j %>&type=Incomplete">Incomplete</a></li>
+                                <li><a href="/weekView/update/?id=<%= i._id %>&day=<%= j %>&type=None">None</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    </ul>
+                </td>
+            <% } %>
+            </tr>   
+        <% } %>
+    </tbody>
+</table>

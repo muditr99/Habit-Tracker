@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/css/home.css">
+
+        <h1 id="page-heading"></h1>
+    
+            <form action="/create-habit" method="post">
+                <input type="text" name="name" placeholder="Enter Habit" required>
+                <button class="btn" type="submit">Add Habit</button>
+            </form>
+
+            <div>
+                <ul class="habit-list">
+                    <% for(let i of habit_list){ %>
+                    <div class="box">
+                        <li class="list-item">
+                            <div>
+                                <p class="habit-name"><%= i.name %></p>
+                            </div>
+                            <div class="check">
+                                <p class="completed">Completed: <%= i.completed %>/7</p> 
+                            </div>
+                            <p>
+                                <a href="/delete-habit/?id=<%= i._id %>">Remove</a>
+                            </p>
+                        </li>
+                    </div>
+                    <% } %>
+                </ul>
+            </div>
+   

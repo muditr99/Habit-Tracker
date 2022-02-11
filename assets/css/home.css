@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    text-align: center;
+}
+
+#page-heading{
+    text-align: center;
+    margin-top: 25px;
+    color: grey;
+}
+
+.habit-list{
+    margin-top: 5%;
+}
+
+.list-item{
+    list-style: none;
+    display: block;
+    margin: 10px 7%;
+    border-bottom: 1px dotted peru;
+}
+
+a{
+    color: grey;
+}
+
+a:hover{
+    color: hotpink;
+}
+
+button{
+    padding: 6px 12.5px;
+    color: rgb(31, 31, 31);
+    background-color: transparent;
+    border: 1px solid silver;
+    font-size: 15px;
+}
+
+form button:hover{
+    cursor: pointer;
+    background-color: #1877f2;
+    color: #fff;
+    transition: .5s;
+}
+
+.box{
+    margin: auto;
+    width: 50%;
+    min-height: 10%;
+}
+
+.completed{
+    font-size: 16px;
+    font-weight: bold;
+    color: gray;
+}
+
+.habit-name{
+    font-size: 20px;
+    font-weight: bold;
+    color: gray;
+}
+
+input{
+    width: 30%;
+    padding: 6px 12.5px;
+    margin-right: -5px;
+    border: 1px solid silver;
+    font-size: 15px;
+}
+
+.check{
+    min-width: 10%;
+}
