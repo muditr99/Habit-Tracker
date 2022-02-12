@@ -1,5 +1,6 @@
 const Habit = require('../models/habit');
 
+// fetch all habits from db and display to user on home page
 module.exports.home = function(req, res){
     Habit.find({}, function(err, habits){
         if(err){
@@ -14,6 +15,7 @@ module.exports.home = function(req, res){
     });
 }
 
+// this action creates new habit and redirects to home page
 module.exports.create = function(req, res){
     let today = new Date();
     let todaysDate = today.getDate();
@@ -31,6 +33,7 @@ module.exports.create = function(req, res){
     })
 }
 
+// this action removes the habit 
 module.exports.delete = function(req, res){
     let id = req.query.id;
 

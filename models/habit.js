@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// defines what the habit looks like in the database
 const habitSchema = new mongoose.Schema({
     name : {
         type : String,

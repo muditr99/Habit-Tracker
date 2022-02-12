@@ -7,12 +7,14 @@
     <thead>
         <tr>
             <th style="color:black;background-color: wheat;">Habit Name</th>
+            <!-- displays current and previous six dates of week -->
             <% for(let i of days){ %>
                     <th class="date-style"><%= i %></th>    
             <% } %>
         </tr>
     </thead>
     <tbody>
+        <!-- view for habits and their status -->
         <% for(let i of habit_list){ %>
             <tr>
             <th class="habit-style"><%= i.name %></th> 
@@ -27,6 +29,7 @@
                         <% } %>
                     </a>
                         <div class="sub-menu">
+                            <!-- toggle status -->
                             <ul>
                                 <li><a href="/weekView/update/?id=<%= i._id %>&day=<%= j %>&type=Complete">Complete</a></li>
                                 <li><a href="/weekView/update/?id=<%= i._id %>&day=<%= j %>&type=Incomplete">Incomplete</a></li>

@@ -1,12 +1,14 @@
 <link rel="stylesheet" href="/css/home.css">
 
         <h1 id="page-heading"></h1>
-    
+
+            <!-- input box and add habit button -->
             <form action="/create-habit" method="post">
                 <input type="text" name="name" placeholder="Enter Habit" required>
                 <button class="btn" type="submit">Add Habit</button>
             </form>
 
+            <!-- contains all the habits -->
             <div>
                 <ul class="habit-list">
                     <% for(let i of habit_list){ %>

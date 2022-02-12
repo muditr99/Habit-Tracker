@@ -2,6 +2,7 @@ const Habit = require('../models/habit');
 const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
                'September', 'October', 'November', 'December'];
 
+// this action displays seven days of each habit and their status for each day
 module.exports.show = function(req, res){
     let today = new Date();
     let days = [];
@@ -28,6 +29,7 @@ module.exports.show = function(req, res){
     });
 }
 
+// updates the status of habit for a day
 module.exports.update = function(req, res){
     // console.log(req.query);
     let id = req.query.id;
@@ -47,6 +49,7 @@ module.exports.update = function(req, res){
     })
 }
 
+// find the no of days the user completed the habit
 const completedDays = async function(habit){
     let totalCompleted = 0;
     for(let i=0;i<habit.Days.length;i++){
@@ -60,6 +63,7 @@ const completedDays = async function(habit){
     return;
 }
 
+// shuffle/change of statuses of habits if the user viewing date is not matched with the habit currDate/creating Date
 const shuffle = async function(habits){
     let today = new Date();
     let todaysDate = today.getDate();

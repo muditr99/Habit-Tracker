@@ -6,6 +6,7 @@ const db = require('./config/mongoose');
 
 const app = express();
 
+// body parser
 app.use(express.urlencoded());
 
 const expressLayouts = require('express-ejs-layouts');
